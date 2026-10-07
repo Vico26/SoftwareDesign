@@ -14,3 +14,12 @@ class adaptadorRapi(origenDePedido):
         if not orden.get("items"):
             raise ValueError("La orden esta vacia")
         sabores=[]
+        for i in orden["items"]:
+            _,codigo,bolas=i["sku"].split("-") #Codigo de helado HEL-VAN-3
+            if codigo not in CODIGOS_SABOR:
+                raise ValueError(f"Codigo de sabor desconocido: {codigo}")
+            sabores+=[CODIGOS_SABOR[codigo]]*int(bolas)*i["cantidad"]
+        sinCono="sin cono" in orden.get("nota","").lower()
+        #RapiEntregas no envia size, se asume grande
+        return Pedido(tuple(sabores),"grande","sin cono" if sinCono else "waffle")
+    
