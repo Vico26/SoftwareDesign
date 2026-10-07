@@ -10,10 +10,10 @@ class clienteRapi:
         return self._orden
 
 class ClienteMandados:
-    def __init__(self,pedido:None):
+    def __init__(self,pedido=None):
         self._pedido= pedido or {
                     "lineas":[{"sabor": "chocolate"},
-                             {"sabor": "chocolate"}],
+                             {"sabor": "fresa"}],
                     "size":"grande",
                     "cono":"waffle"
         }
