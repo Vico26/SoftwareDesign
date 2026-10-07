@@ -3,9 +3,9 @@
 
 # En caso de que se agregara un if por tipo de adaptador dentro de la Cocina, la prueba fallaría
 
-from ..cocina import Cocina
-from ..origenDePedidos import origenDePedido
-from ..pedido import Pedido
+from heladeria_Rumoroso.cocina import Cocina
+from heladeria_Rumoroso.origenDePedidos import origenDePedido
+from heladeria_Rumoroso.pedido import Pedido
 
 # Prueba de un adaptador nuevo, que se define en esta misma prueba
 def test_cocina_funciona_con_adaptador_que_nunca_vio():
