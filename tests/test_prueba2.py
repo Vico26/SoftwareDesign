@@ -1,4 +1,3 @@
-# Prueba para ver que la Cocina funciona con cualquier adaptador
 # Esta prueba comprueba que la Cocina no depende de un adaptador en específico
 
 # En caso de que se agregara un if por tipo de adaptador dentro de la Cocina, la prueba fallaría
